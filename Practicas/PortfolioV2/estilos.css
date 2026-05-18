@@ -1,0 +1,147 @@
+/* --- Variables de Tema (Por defecto: Claro) --- */
+:root {
+    --bg-color: #f4f7f6;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --accent-color: #0076a3;
+    --card-bg: #f9f9f9;
+    --border-color: #e0e0e0;
+}
+
+/* --- Variables para Modo Oscuro --- */
+body.dark-mode {
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #4fc3f7;
+    --card-bg: #2d2d2d;
+    --border-color: #444444;
+}
+
+/* --- Estilos Generales y Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Botón de Cambio de Tema (Fijo arriba a la derecha) --- */
+.theme-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-toggle {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- Header con Flexbox (Responsive) --- */
+header {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column; /* Apilado en móviles */
+    gap: 10px;
+}
+
+/* Media Query para pantallas medianas/grandes (Flex horizontal) */
+@media (min-width: 600px) {
+    header nav {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+/* --- Secciones --- */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* --- Grid Responsive para Formación y Experiencia --- */
+.cards-container {
+    display: grid;
+    /* auto-fit creará columnas automáticamente si caben con un mínimo de 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.card time {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #888;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card span {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* --- Footer / Competencias --- */
+.competencias-box {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.competencias-box p {
+    margin-bottom: 8px;
+}
