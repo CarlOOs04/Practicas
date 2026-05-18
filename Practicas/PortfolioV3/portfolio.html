@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Carlos Rodríguez Andújar</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" class="btn-toggle">🌙 Modo Oscuro</button>
+    </div>
+
+<main>
+    <header>
+        <h1>Carlos Rodríguez Andújar</h1>
+        <nav>
+            <p><strong>Tel:</strong> 644983244</p>
+            <p><strong>Email:</strong> carlosrodriguezandujar4@gmail.com</p>
+            <p><strong>Lugar:</strong> Almagro, Ciudad Real</p>
+        </nav>
+    </header>
+
+    <section class="section-about">
+        <h2>Sobre mí</h2>
+        <p>Estudiante en formación enfocado en el desarrollo de habilidades profesionales. Me considero una persona 
+            proactiva, puntual y con gran capacidad de aprendizaje rápido para contribuir positivamente a proyectos 
+            tecnológicos.</p>
+    </section>
+
+    <section class="section-form">
+        <h2>Añadir Nuevo Estudio</h2>
+        <form id="form-estudios" class="form-grid">
+            <div class="form-group">
+                <label for="input-periodo">Periodo / Año:</label>
+                <input type="text" id="input-periodo" placeholder="Ej: 2026 — Presente" required>
+            </div>
+            <div class="form-group">
+                <label for="input-titulo">Título del Estudio:</label>
+                <input type="text" id="input-titulo" placeholder="Ej: Máster en Desarrollo Frontend" required>
+            </div>
+            <div class="form-group">
+                <label for="input-centro">Centro Educativo:</label>
+                <input type="text" id="input-centro" placeholder="Ej: Universidad o I.E.S" required>
+            </div>
+            <button type="submit" class="btn-submit">Guardar Estudio</button>
+        </form>
+    </section>
+
+    <section class="section-grid">
+        <h2>Formación Académica</h2>
+        <div id="formacion-container" class="cards-container">
+            </div>
+    </section>
+
+    <section class="section-grid">
+        <h2>Experiencia</h2>
+        <div class="cards-container">
+            <article class="card">
+                <time>Oct — Dic 2024</time>
+                <h3>Ayuntamiento de Almagro</h3>
+                <span>Prácticas profesionales</span>
+            </article>
+
+            <article class="card">
+                <time>Abr — Jun 2024</time>
+                <h3>Electrodomésticos Cañete</h3>
+                <span>Prácticas profesionales</span>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <section>
+            <h2>Competencias e Idiomas</h2>
+            <aside class="competencias-box">
+                <p><strong>Idiomas:</strong> Español (Nativo) / Inglés (Avanzado)</p>
+                <p><strong>Herramientas:</strong> Manejo básico de Microsoft Office</p>
+                <p><strong>Otros:</strong> Permiso de conducir clase B</p>
+            </aside>
+        </section>
+    </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
